@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Accordion-Carousel-Site</title>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+
+        <div class="slide first">
+          <img src="images/image1.jpg" alt="photo1" />
+        </div>
+        <div class="slide">
+          <img src="images/image2.jpg" alt="photo2" />
+        </div>
+        <div class="slide">
+          <img src="images/image3.jfif" alt="photo3" />
+        </div>
+        <div class="slide">
+          <img src="images/image4.jfif" alt="photo4" />
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <section class="accordion container">
+      <div class="accordion__container">
+        <header class="accordion__header">
+          <h1 class="accordion__title">FAQ</h1>
+        </header>
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">How do students apply?</h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">
+              Students apply through the application section by clicking the
+              apply button.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">
+              When is the application start and end date?
+            </h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">
+              The program is an ongoing application prospective students can
+              apply but are shortlisted for an admission if they meet all the
+              admission requirements.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">
+              Does the school offer scholaships or Graduate assistantships?
+            </h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">No</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">How much is the application fee?</h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">Applications are free.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">
+              How many semesters does the school program run?
+            </h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">Two semesters.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">
+              Does the school offer admission to international students?
+            </h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">Yes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>
